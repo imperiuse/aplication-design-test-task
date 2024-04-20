@@ -1,1 +1,8 @@
-.idea
+*.iml
+/.idea
+/.vscode
+node_modules
+/bin/*
+cover.out
+cover.score
+/docs/swagger_cut.json
