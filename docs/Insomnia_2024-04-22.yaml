@@ -1,0 +1,197 @@
+_type: export
+__export_format: 4
+__export_date: 2024-04-22T02:42:49.151Z
+__export_source: insomnia.desktop.app:v8.6.1
+resources:
+  - _id: req_bccce7d107524c569a2bf0dd6559a0b9
+    parentId: fld_47ee538a05324be7bac5e80f83b5a698
+    modified: 1713730628971
+    created: 1713730577241
+    url: http://localhost:8080/api/v1/order
+    name: List orders
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/8.6.1
+    authentication: {}
+    metaSortKey: -1713730606591
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_47ee538a05324be7bac5e80f83b5a698
+    parentId: wrk_969804f35d034bbf997486cb9901bf2f
+    modified: 1713730599115
+    created: 1713730599115
+    name: Debug
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1713730599115
+    _type: request_group
+  - _id: wrk_969804f35d034bbf997486cb9901bf2f
+    parentId: null
+    modified: 1713641453598
+    created: 1713641453598
+    name: HotelBooking
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_d51720557215494091c94118ed6e8fcb
+    parentId: fld_47ee538a05324be7bac5e80f83b5a698
+    modified: 1713730638368
+    created: 1713730623240
+    url: http://localhost:8080/api/v1/room
+    name: List rooms
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/8.6.1
+    authentication: {}
+    metaSortKey: -1713686248504.5
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_92c4b2ba66e0432291e169b680e89a1c
+    parentId: fld_47ee538a05324be7bac5e80f83b5a698
+    modified: 1713753442324
+    created: 1713733265140
+    url: http://localhost:8080/api/v1/room/1/1
+    name: List rooms with filter by hotel and room_type
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/8.6.1
+    authentication: {}
+    metaSortKey: -1713664069461.25
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_cfdd143b0adf41568a533519a9882d9d
+    parentId: wrk_969804f35d034bbf997486cb9901bf2f
+    modified: 1713660203229
+    created: 1713641890418
+    url: http://localhost:8080/api/v1/ping
+    name: ping
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/8.6.1
+    authentication: {}
+    metaSortKey: -1713641890418
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_49caccdb5460441b8702f8b8a95f2262
+    parentId: wrk_969804f35d034bbf997486cb9901bf2f
+    modified: 1713753516503
+    created: 1713660218702
+    url: http://localhost:8080/api/v1/order/35a3355e-d80a-4328-ba67-49d18ac64bea
+    name: order/:order_id
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/8.6.1
+    authentication: {}
+    metaSortKey: -1712607398901.5
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_139ddaa7fc0b4aaab6d571586be71eac
+    parentId: wrk_969804f35d034bbf997486cb9901bf2f
+    modified: 1713753639147
+    created: 1713660224822
+    url: http://localhost:8080/api/v1/order/
+    name: order
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "hotel_id": 1,
+          "room_type_id": 2,
+          "email": "ars-saz@ya.ru",
+          "from": "2024-04-01T00:00:00Z",
+          "to": "2024-04-11T00:00:00Z",
+          "promo_code": "BLACK_FRIDAY"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/8.6.1
+    authentication: {}
+    metaSortKey: -1712090153143.25
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_200175148d7b94bf331d6c41b2e2b279ec6f6d5a
+    parentId: wrk_969804f35d034bbf997486cb9901bf2f
+    modified: 1713641453600
+    created: 1713641453600
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: null
+    color: null
+    isPrivate: false
+    metaSortKey: 1713641453600
+    _type: environment
+  - _id: jar_200175148d7b94bf331d6c41b2e2b279ec6f6d5a
+    parentId: wrk_969804f35d034bbf997486cb9901bf2f
+    modified: 1713641453601
+    created: 1713641453601
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
